@@ -67,7 +67,7 @@ class SquirrelServerHandler(BaseHTTPRequestHandler):
             return (resourceName, resourceId)
         return False
 
-    # ACTIONS
+    # ACTIONS - MOCK ALL OF THESE, REPLACE AND TEST
 
     def handleSquirrelsIndex(self):
         db = SquirrelDB()
@@ -86,6 +86,7 @@ class SquirrelServerHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(bytes(json.dumps(squirrel), "utf-8"))
         else:
+            #test this
             self.handle404()
 
     def handleSquirrelsCreate(self):
@@ -104,6 +105,7 @@ class SquirrelServerHandler(BaseHTTPRequestHandler):
             self.send_response(204)
             self.end_headers()
         else:
+            #test this
             self.handle404()
 
     def handleSquirrelsDelete(self, squirrelId):
@@ -114,6 +116,7 @@ class SquirrelServerHandler(BaseHTTPRequestHandler):
             self.send_response(204)
             self.end_headers()
         else:
+            #test this
             self.handle404()
 
     def handle404(self):
