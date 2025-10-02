@@ -1,0 +1,29 @@
+================================================= test session starts ==================================================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /mnt/c/Users/21hun/OneDrive/Desktop/Fall2025/Se3150/testing-with-doubles-21huntmik
+plugins: mock-3.15.1, describe-2.2.0, spec-5.1.0
+collected 10 items
+
+test_mydb.py:
+
+My DB:
+
+  Init method:
+    ✓ Init when file exists
+    ✓ Init when file does not exist
+
+  Load strings method:
+    ✓ Load strings opens file correctly
+    ✓ Load strings with context manager
+
+  Save string method:
+    ✓ Save string loads existing data
+    ✓ Save string appends and saves
+    ✓ Save string integration with empty list
+
+  Save strings method:
+    ✓ Save strings opens file correctly
+    ✓ Save strings with context manager
+    ✓ Save strings calls pickle dump with correct args                                                           [100%]
+
+================================================== 10 passed in 0.37s ==================================================

@@ -1,0 +1,70 @@
+================================================= test session starts ==================================================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /mnt/c/Users/21hun/OneDrive/Desktop/Fall2025/Se3150/testing-with-doubles-21huntmik
+plugins: mock-3.15.1, describe-2.2.0, spec-5.1.0
+collected 33 items
+
+test_squirrel_server.py:
+
+Squirrel Server Handler:
+
+  Create squirrels:
+    ✓ It queries db to create squirrel with given data attributes
+    ✓ It returns 201 status code
+    ✓ It calls end headers
+
+  Delete invalid resource:
+    ✓ It calls handle404 for invalid resource
+
+  Delete squirrels:
+    ✓ It queries db for squirrel before delete
+    ✓ It deletes squirrel when found
+    ✓ It returns 204 status code when squirrel deleted
+    ✓ It calls end headers when squirrel deleted
+    ✓ It calls handle404 when squirrel not found for delete
+
+  Delete without id:
+    ✓ It calls handle404 for delete without id
+
+  Get invalid resource:
+    ✓ It calls handle404 for invalid resource
+
+  Handle404:
+    ✓ It returns 404 status code
+    ✓ It sends text plain content type header
+    ✓ It calls end headers
+    ✓ It returns 404 not found message
+
+  Post invalid resource:
+    ✓ It calls handle404 for invalid resource
+
+  Post with id:
+    ✓ It calls handle404 for post with id
+
+  Put invalid resource:
+    ✓ It calls handle404 for invalid resource
+
+  Put without id:
+    ✓ It calls handle404 for put without id
+
+  Retrieve single squirrel functionality:
+    ✓ It queries db for squirrel by id
+    ✓ It returns 200 status code when squirrel found
+    ✓ It sends json content type header when squirrel found
+    ✓ It calls handle404 when squirrel not found
+
+  Retrieve squirrels functionality:
+    ✓ It queries db for squirrels
+    ✓ It returns 200 status code
+    ✓ It sends json content type header
+    ✓ It calls end headers
+    ✓ It returns response body with squirrels json data
+
+  Update squirrels:
+    ✓ It queries db for squirrel before update
+    ✓ It updates squirrel when found
+    ✓ It returns 204 status code when squirrel updated
+    ✓ It calls end headers when squirrel updated
+    ✓ It calls handle404 when squirrel not found for update                                                      [100%]
+
+================================================== 33 passed in 0.64s ==================================================
